@@ -15,7 +15,7 @@
 
       <div class="field">
       <%= f.label :obra_id %>
-      <%= f.collection_select(:obra_id, Obra.all.order('nombre ASC'), :codigo, :nombre, {:prompt => "Seleccione una obra"},{:class => "ccosto_selection"}) %>
+      <%= f.collection_select(:obra_id, Obra.all.order('codigo DESC'), :codigo, :nombre, {:prompt => "Seleccione una obra"},{:class => "ccosto_selection"}) %>
       </div>
 
       <div class="table-responsive">
