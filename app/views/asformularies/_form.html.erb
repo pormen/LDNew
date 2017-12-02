@@ -102,7 +102,7 @@
 
 <% else %>
     <%= form.label :codigo_obra, 'Codigo Obra' %><br>
-    <%= form.collection_select :codigo_obra, Obra.all.order('codigo DESC'), :codigo, :nombre_codigo, {include_blank: true}, {style: "width:220px"} %><br>
+    <%= form.collection_select :codigo_obra, Obra.all.order('codigo DESC'), :codigo, :nombre_codigo, {include_blank: true}, {style: "width: 87.5%"} %><br>
 <%end%>
 
   </div>

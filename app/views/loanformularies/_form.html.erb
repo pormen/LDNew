@@ -32,7 +32,7 @@
         <% end %>
         <br>
         <% if !params[:obra]%>
-        <%= form.label :obra, 'Obra' %> <br><%= form.collection_select :loanformulary_obra, Obra.all.order('codigo DESC'), :codigo, :nombre_codigo, {include_blank: true} %><br>
+        <%= form.label :obra, 'Obra' %> <br><%= form.collection_select :loanformulary_obra, Obra.all.order('codigo DESC'), :codigo, :nombre_codigo, {include_blank: true}, {style: "width: 87.5%"} %><br>
         <% else %>
         <%= form.label :obra, 'Obra' %> <br>
         <%= form.text_field :obra, id: :loanformulary_obra, value: params[:obra], hidden: true %>
@@ -102,13 +102,6 @@
           <%= form.label :image, 'Imagen de respaldo' %>
           <%= form.file_field :image, :class => "ancho" %>
         </div>
-
-        <style>
-          /* hay que sacar de aqui esto */
-          .ancho {
-            width: 95%;
-          }
-        </style>
 
         <div class="field">
           <%= form.label :descripcion_documentos_respaldo %><br>

@@ -41,12 +41,10 @@ class LdController < ApplicationController
 	def download_pdf
 		#@assignbenefit = Rails.application.config.ab
 
-        pdf = WickedPdf.new.pdf_from_string(
-		render_to_string('layouts/reportsPannelLog.pdf.erb', layout: false)
+    pdf = WickedPdf.new.pdf_from_string(
+			render_to_string('layouts/reportsPannelLog.pdf.erb', layout: false)
 		)
-
 		send_data pdf, :filename => "Reportes.pdf", :type => "application/pdf",:disposition => "attachment"
-
     	end
     end
 

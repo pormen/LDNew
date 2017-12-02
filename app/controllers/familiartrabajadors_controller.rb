@@ -23,7 +23,6 @@ class FamiliartrabajadorsController < ApplicationController
   def new
     @familiartrabajador = Familiartrabajador.new
     @trabajador = Employee.find_by(rut: params[:rut_trabajador])
-    @relacion = ["Hermano(a)", "Hijo(a)", "Cónyuge", "Esposo(a)", "Padre", "Madre"]
   end
 
   # GET /familiartrabajadors/1/edit
